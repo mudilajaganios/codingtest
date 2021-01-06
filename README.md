@@ -67,6 +67,10 @@ fibonaccinumber(nth: 9) Output: 34
 
 #### Question IV. Which architecture would you use for the required task below? Why? 
 Answer:
+I would use MVC pattern for the below requirement. 
+1. As there is no complex UI behavior is involved.
+2. Limited data to be rendered so, there is no need of Reactive loading
+3. Singleton is used for the API interface
 
 #### Question V. Create a currency converter by utilizing data from the fixer.io API.
-Answer:
+Answer: Please find the Currency Converter project in the source code
