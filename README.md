@@ -74,3 +74,13 @@ I would use MVC pattern for the below requirement.
 
 #### Question V. Create a currency converter by utilizing data from the fixer.io API.
 Answer: Please find the Currency Converter project in the source code
+https://github.com/mudilajaganios/codingtest/tree/main/Currency%20Converter
+
+Please be aware that the subscription for https://fixer.io/ is free and limited. 
+1. API is supporting changing the base currency converter and also conversion between two currencies. 
+2. You may not be able to see the conversion in action (Please update the access key in DataFixerAPI.swift class to see the functionality working.
+3. HTTPS is not supported for free subscription.
+
+Despite the above limitations, you can build the application and navigate through the view without any issues.
+
+Thanks for the opportunity.
