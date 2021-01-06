@@ -12,6 +12,10 @@
 		C19F273D25A543D8008B3022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19F273B25A543D8008B3022 /* LaunchScreen.storyboard */; };
 		C19F274725A55AEB008B3022 /* CurrencyConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F274625A55AEB008B3022 /* CurrencyConverterViewController.swift */; };
 		C19F274C25A55B09008B3022 /* DataFixerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F274B25A55B09008B3022 /* DataFixerAPI.swift */; };
+		C19F275325A57157008B3022 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F275225A57157008B3022 /* Currency.swift */; };
+		C19F275825A57952008B3022 /* CurrencyCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F275725A57952008B3022 /* CurrencyCellView.swift */; };
+		C19F275D25A590CE008B3022 /* CurrencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F275C25A590CE008B3022 /* CurrencyResponse.swift */; };
+		C19F276025A59174008B3022 /* ConversionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F275F25A59174008B3022 /* ConversionResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		C19F273E25A543D8008B3022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C19F274625A55AEB008B3022 /* CurrencyConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterViewController.swift; sourceTree = "<group>"; };
 		C19F274B25A55B09008B3022 /* DataFixerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFixerAPI.swift; sourceTree = "<group>"; };
+		C19F275225A57157008B3022 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		C19F275725A57952008B3022 /* CurrencyCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCellView.swift; sourceTree = "<group>"; };
+		C19F275C25A590CE008B3022 /* CurrencyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyResponse.swift; sourceTree = "<group>"; };
+		C19F275F25A59174008B3022 /* ConversionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,8 @@
 		C19F272F25A543D5008B3022 /* Currency Converter */ = {
 			isa = PBXGroup;
 			children = (
+				C19F275625A5793C008B3022 /* View */,
+				C19F275125A57143008B3022 /* Model */,
 				C19F274A25A55AF3008B3022 /* Service */,
 				C19F274525A55ACB008B3022 /* View Controller */,
 				C19F273025A543D5008B3022 /* AppDelegate.swift */,
@@ -78,6 +88,24 @@
 				C19F274B25A55B09008B3022 /* DataFixerAPI.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		C19F275125A57143008B3022 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C19F275225A57157008B3022 /* Currency.swift */,
+				C19F275C25A590CE008B3022 /* CurrencyResponse.swift */,
+				C19F275F25A59174008B3022 /* ConversionResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C19F275625A5793C008B3022 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C19F275725A57952008B3022 /* CurrencyCellView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C19F275825A57952008B3022 /* CurrencyCellView.swift in Sources */,
+				C19F275325A57157008B3022 /* Currency.swift in Sources */,
 				C19F274C25A55B09008B3022 /* DataFixerAPI.swift in Sources */,
+				C19F275D25A590CE008B3022 /* CurrencyResponse.swift in Sources */,
 				C19F273125A543D5008B3022 /* AppDelegate.swift in Sources */,
 				C19F274725A55AEB008B3022 /* CurrencyConverterViewController.swift in Sources */,
+				C19F276025A59174008B3022 /* ConversionResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
