@@ -16,8 +16,10 @@ func findAnargams(firstString: String, secondString: String) -> Bool {
     second.removeAll { !$0.isLetter }
     return first.sorted() == second.sorted()
 }
-```
 
+findAnargams(firstString: "debit card", secondString: "bad credit") -> true
+findAnargams(firstString: "punishments", secondString: "nine thumps") -> false
+```
 
 #### Question III. Write a method in Swift to generate the nth Fibonacci number (1, 1, 2, 3, 5, 8, 13, 21, 34) 
 
