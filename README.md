@@ -2,8 +2,10 @@
 
 #### Question I. Add arithmetic operators (add, subtract, multiply, divide) to make the following expressions true. You can use any parentheses you’d like. 
     3 1 3 9 = 12
-Answer: 
-
+Answer:     
+```
+    ((3+1)/3)*9 = 12
+```
 #### Question II. Write a function/method utilizing Swift to determine whether two strings are anagrams or not (examples of anagrams: debit card/bad credit, punishments/nine thumps, etc.)
 Answer:
 
@@ -65,6 +67,10 @@ fibonaccinumber(nth: 9) Output: 34
 
 #### Question IV. Which architecture would you use for the required task below? Why? 
 Answer:
+I would use MVC pattern for the below requirement. 
+1. As there is no complex UI behavior is involved.
+2. Limited data to be rendered so, there is no need of Reactive loading
+3. Singleton is used for the API interface
 
 #### Question V. Create a currency converter by utilizing data from the fixer.io API.
-Answer:
+Answer: Please find the Currency Converter project in the source code
