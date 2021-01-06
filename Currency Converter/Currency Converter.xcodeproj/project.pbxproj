@@ -16,6 +16,9 @@
 		C19F275825A57952008B3022 /* CurrencyCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F275725A57952008B3022 /* CurrencyCellView.swift */; };
 		C19F275D25A590CE008B3022 /* CurrencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F275C25A590CE008B3022 /* CurrencyResponse.swift */; };
 		C19F276025A59174008B3022 /* ConversionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F275F25A59174008B3022 /* ConversionResponse.swift */; };
+		C19F276325A5A101008B3022 /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F276225A5A101008B3022 /* CurrenciesViewController.swift */; };
+		C19F276625A5A299008B3022 /* CurrencyConversionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F276525A5A299008B3022 /* CurrencyConversionCell.swift */; };
+		C19F276A25A5A81B008B3022 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F276925A5A81B008B3022 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		C19F275725A57952008B3022 /* CurrencyCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCellView.swift; sourceTree = "<group>"; };
 		C19F275C25A590CE008B3022 /* CurrencyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyResponse.swift; sourceTree = "<group>"; };
 		C19F275F25A59174008B3022 /* ConversionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionResponse.swift; sourceTree = "<group>"; };
+		C19F276225A5A101008B3022 /* CurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewController.swift; sourceTree = "<group>"; };
+		C19F276525A5A299008B3022 /* CurrencyConversionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionCell.swift; sourceTree = "<group>"; };
+		C19F276925A5A81B008B3022 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		C19F272F25A543D5008B3022 /* Currency Converter */ = {
 			isa = PBXGroup;
 			children = (
+				C19F276825A5A80E008B3022 /* Utility */,
 				C19F275625A5793C008B3022 /* View */,
 				C19F275125A57143008B3022 /* Model */,
 				C19F274A25A55AF3008B3022 /* Service */,
@@ -78,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				C19F274625A55AEB008B3022 /* CurrencyConverterViewController.swift */,
+				C19F276225A5A101008B3022 /* CurrenciesViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -104,8 +112,17 @@
 			isa = PBXGroup;
 			children = (
 				C19F275725A57952008B3022 /* CurrencyCellView.swift */,
+				C19F276525A5A299008B3022 /* CurrencyConversionCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C19F276825A5A80E008B3022 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C19F276925A5A81B008B3022 /* Utility.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C19F276A25A5A81B008B3022 /* Utility.swift in Sources */,
 				C19F275825A57952008B3022 /* CurrencyCellView.swift in Sources */,
 				C19F275325A57157008B3022 /* Currency.swift in Sources */,
 				C19F274C25A55B09008B3022 /* DataFixerAPI.swift in Sources */,
+				C19F276625A5A299008B3022 /* CurrencyConversionCell.swift in Sources */,
+				C19F276325A5A101008B3022 /* CurrenciesViewController.swift in Sources */,
 				C19F275D25A590CE008B3022 /* CurrencyResponse.swift in Sources */,
 				C19F273125A543D5008B3022 /* AppDelegate.swift in Sources */,
 				C19F274725A55AEB008B3022 /* CurrencyConverterViewController.swift in Sources */,
@@ -325,6 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6A3R6WG95;
 				INFOPLIST_FILE = "Currency Converter/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6A3R6WG95;
 				INFOPLIST_FILE = "Currency Converter/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

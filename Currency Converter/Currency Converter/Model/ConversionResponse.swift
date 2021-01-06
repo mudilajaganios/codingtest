@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct ConversionResponse: Codable {
+struct ConversionResponse: ResponseBase {
+    var error: ResponseError?
     let success: Bool
-    let info: Info
-    let date: String
-    let result: Double
+    let info: Info?
+    let date: String?
+    let result: Double?
 }
 
 struct Info: Codable {

@@ -18,27 +18,43 @@ class DataFixerAPI {
         
     }
     
-    func getCurrencies(for baseRate: String) {
+    func getCurrencies(for baseRate: String, completion: @escaping(CurrencyResponse?) -> Void) {
         let params = ["access_key": self.apiKey,
                       "base": baseRate]
-        self.getRequest(contract: "latest", parameters: params) {
-            
+        self.getRequest(contract: "latest", parameters: params) { (data) in
+            guard let responseData = try? JSONDecoder().decode(CurrencyResponse.self, from: data) else {
+                completion(nil)
+                return
+            }
+            if responseData.success {
+                completion(responseData)
+            } else {
+                completion(nil)
+            }
         }
     }
     
-    func convert(baseCurrency: String, desiredCurrency: String, amount: Double) {
+    func convert(baseCurrency: String, desiredCurrency: String, amount: String, completion: @escaping(ConversionResponse?) -> Void) {
         let params = ["access_key": self.apiKey,
                       "from": baseCurrency,
                       "to": desiredCurrency,
-                      "amount": "\(amount)"]
-        self.getRequest(contract: "latest", parameters: params) {
-            
+                      "amount": amount]
+        self.getRequest(contract: "latest", parameters: params) { (data) in
+            guard let responseData = try? JSONDecoder().decode(ConversionResponse.self, from: data) else {
+                completion(nil)
+                return
+            }
+            if responseData.success {
+                completion(responseData)
+            } else {
+                completion(nil)
+            }
         }
     }
     
     fileprivate func getRequest(contract: String,
                                 parameters: [String: String]?,
-                                completion: @escaping() -> Void) {
+                                completion: @escaping(Data) -> Void) {
         guard let url = URL(string: self.apiBasePath + contract) else { return }
         var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
         
@@ -46,12 +62,24 @@ class DataFixerAPI {
             urlComponents?.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
         }
         
-        var httpRequest = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy,
+        var httpRequest = URLRequest(url: urlComponents!.url!, cachePolicy: .useProtocolCachePolicy,
                                  timeoutInterval: 10.0)
         httpRequest.httpMethod = "GET"
         
         URLSession.shared.dataTask(with: httpRequest) { (data, response, error) in
+            if error != nil {
+                print(error?.localizedDescription)
+            }
+            if response != nil {
+                print(response)
+            }
             
+            guard let data = data else {
+                print("Error with data")
+                return
+            }
+            
+            completion(data)
         }.resume()
     }
 }
