@@ -2,8 +2,10 @@
 
 #### Question I. Add arithmetic operators (add, subtract, multiply, divide) to make the following expressions true. You can use any parentheses you’d like. 
     3 1 3 9 = 12
-Answer: 
-
+Answer:     
+```
+    ((3+1)/3)*9 = 12
+```
 #### Question II. Write a function/method utilizing Swift to determine whether two strings are anagrams or not (examples of anagrams: debit card/bad credit, punishments/nine thumps, etc.)
 Answer:
 
