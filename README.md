@@ -1,12 +1,6 @@
-# codingtest
+# Fibonacci Series & Anargams Algorithms
 
-#### Question I. Add arithmetic operators (add, subtract, multiply, divide) to make the following expressions true. You can use any parentheses you’d like. 
-    3 1 3 9 = 12
-Answer:     
-```
-    ((3+1)/3)*9 = 12
-```
-#### Question II. Write a function/method utilizing Swift to determine whether two strings are anagrams or not (examples of anagrams: debit card/bad credit, punishments/nine thumps, etc.)
+#### Question I. Write a function/method utilizing Swift to determine whether two strings are anagrams or not (examples of anagrams: debit card/bad credit, punishments/nine thumps, etc.)
 Answer:
 
 ```
@@ -23,7 +17,7 @@ findAnargams(firstString: "debit card", secondString: "bad credit") -> true
 findAnargams(firstString: "punishments", secondString: "nine thumps") -> false
 ```
 
-#### Question III. Write a method in Swift to generate the nth Fibonacci number (1, 1, 2, 3, 5, 8, 13, 21, 34) 
+#### Question II. Write a method in Swift to generate the nth Fibonacci number (1, 1, 2, 3, 5, 8, 13, 21, 34) 
 
 A. recursive approach
 ```
@@ -64,23 +58,3 @@ func fibonaccinumber(nth: Int) -> Int {
 
 fibonaccinumber(nth: 9) Output: 34
 ```
-
-#### Question IV. Which architecture would you use for the required task below? Why? 
-Answer:
-I would use MVC pattern for the below requirement. 
-1. As there is no complex UI behavior is involved.
-2. Limited data to be rendered so, there is no need of Reactive loading
-3. Singleton is used for the API interface
-
-#### Question V. Create a currency converter by utilizing data from the fixer.io API.
-Answer: Please find the Currency Converter project in the source code
-https://github.com/mudilajaganios/codingtest/tree/main/Currency%20Converter
-
-Please be aware that the subscription for https://fixer.io/ is free and limited. 
-1. API is supporting changing the base currency converter and also conversion between two currencies. 
-2. You may not be able to see the conversion in action (Please update the access key in DataFixerAPI.swift class to see the functionality working.
-3. HTTPS is not supported for free subscription.
-
-Despite the above limitations, you can build the application and navigate through the view without any issues.
-
-Thanks for the opportunity.
